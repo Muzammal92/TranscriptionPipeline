@@ -1,0 +1,48 @@
+[
+  {
+    "ContainingType": "TranscriptionPipeline.Endpoints.TranscriptionEndpoints",
+    "Method": "SubmitTranscriptionAsync",
+    "RelativePath": "api/transcribe",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "SubmitTranscription"
+  },
+  {
+    "ContainingType": "TranscriptionPipeline.Endpoints.TranscriptionEndpoints",
+    "Method": "GetTranscriptionAsync",
+    "RelativePath": "api/transcribe/{id:guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetTranscription"
+  }
+]

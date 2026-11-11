@@ -1,0 +1,47 @@
+{
+  "info": {
+    "name": "Transcription Pipeline",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5299" },
+    { "key": "apiKey", "value": "dev-local-only-key-change-me" },
+    { "key": "jobId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Submit Transcription",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "X-Api-Key", "value": "{{apiKey}}" }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "file", "type": "file", "src": [] }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/transcribe",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "transcribe"]
+        }
+      }
+    },
+    {
+      "name": "Get Transcription",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "X-Api-Key", "value": "{{apiKey}}" }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/transcribe/{{jobId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "transcribe", "{{jobId}}"]
+        }
+      }
+    }
+  ]
+}

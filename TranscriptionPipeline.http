@@ -1,0 +1,6 @@
+@TranscriptionPipeline_HostAddress = http://localhost:5074
+
+GET {{TranscriptionPipeline_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
